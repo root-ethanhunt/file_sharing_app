@@ -1,0 +1,16 @@
+Download page
+
+<section>
+    <% if(locals.error){%>
+        <h4><%=locals.error%>Daya kuch to garbar hai</h4>
+    <%}else{%>
+        <h2>Your file is ready to download</h2>
+        <p>Link expires in 24 hours</p>
+        <h4><%= fileName%></h4>
+        <small><%=parseInt(fileSize/1000)%>KB</small> 
+        <div>
+            <a href="<%= download%>">Download file</a>
+        </div>   
+
+        <%}%>
+</section>
